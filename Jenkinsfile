@@ -11,7 +11,7 @@ pipeline {
   stages {
       stage('GIT_Clone') {
         steps {
-        checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/tarwatesheetal/demo1.git']]]
+        checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/tarwatesheetal/parameter-demo.git']]]
            }
         }
         stage('Terraform_Setup') {
